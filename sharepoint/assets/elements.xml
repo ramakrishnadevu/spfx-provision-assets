@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <Field ID="{3356f92a-2ce4-48f4-b29b-59e925e38cb8}"
+            Name="RequestID"
+            StaticName="RequestID"
+            DisplayName ="Request ID"
+            Type = "Number"
+            Required="FALSE"
+            Hidden="FALSE"
+            Decimals = "0"
+            Group="Asset Request App" />
+
+    <Field ID="{3015274e-3c3a-4637-9646-a57163460738}"
+            Name ="AssetType"
+            StaticName="AssetType" 
+            DisplayName ="Asset Type"
+            Type ="Choice"
+            Required ="FALSE"
+            Group ="Asset Request App">
+            <CHOICES>
+                <CHOICE>CTS Laptop</CHOICE>
+                <CHOICE>Desktop</CHOICE>
+                <CHOICE>Client Laptop</CHOICE>
+                <CHOICE>Others</CHOICE>
+            </CHOICES>
+    </Field>
+    <Field ID="{beae3d8f-b1e7-421c-bde2-92922410b1d8}"
+            Name = "PurposeofUsage"
+            DisplayName = "Purpose of Usage"
+            StaticName="PurposeofUsage" 
+           Group="Asset Request App" 
+           Type="Note" 
+           Required="FALSE" 
+           EnforceUniqueValues="FALSE" 
+           Indexed="FALSE" 
+           NumLines="8" 
+           RichText="TRUE" 
+           RichTextMode="FullHtml" 
+           IsolateStyles="TRUE" 
+           Sortable="FALSE" />
+
+    <Field ID="{5f72239e-de27-4d7f-82cd-52136d88307f}"
+            Name = "ApproverName"
+            StaticName="ApproverName"
+            DisplayName = "Approver Name"
+            Type = "User"
+            UserSelectionMode ="PeopleAndGroups"
+            Required="FALSE"
+            Group="Asset Request App"/>
+    <Field ID="{a57d3ecb-aff6-4a1d-aab4-1ac7dabd175a}" 
+            Name ="RequestStatus"
+            StaticName="RequestStatus"
+            DisplayName ="Request Status"
+            Type ="Choice"
+            Required ="FALSE"
+            Group ="Asset Request App">
+            <CHOICES>
+                <CHOICE>Submitted</CHOICE>
+                <CHOICE>Pending Approval</CHOICE>
+                <CHOICE>Approved</CHOICE>
+                <CHOICE>Rejected</CHOICE>
+                <CHOICE>Scheduled For Delivery</CHOICE>
+            </CHOICES>
+    </Field>
+    <Field ID="{095fab39-06e8-42a7-ae23-f73892250a2f}" 
+            Name="RequestedOn"
+            StaticName="RequestedOn"
+            DisplayName="Requested On"
+            Required="FALSE"
+            Type="DateTime"
+            Format="DateTime"
+            Group="Asset Request App"/>
+    <Field ID="{86f0b185-03b9-4611-b70e-4c7e2fea95a1}"
+            Name ="RequestDepartment"
+            StaticName="RequestDepartment"
+            DisplayName ="Request Department"
+            Type ="Choice"
+            Required ="FALSE"
+            Group ="Asset Request App">
+            <CHOICES>
+                <CHOICE>IT</CHOICE>
+                <CHOICE>BPO</CHOICE>
+                <CHOICE>ITES</CHOICE>
+                <CHOICE>INFRA</CHOICE>
+            </CHOICES>
+    </Field>
+    <Field ID="{d5dd100c-dd25-4c26-850a-4061aaa45c08}" 
+            Name = "ReasonforRejection"
+            DisplayName = "Reason for Rejection"
+            StaticName="ReasonforRejection" 
+           Group="Asset Request App" 
+           Type="Note" 
+           Required="FALSE" 
+           EnforceUniqueValues="FALSE" 
+           Indexed="FALSE" 
+           NumLines="8" 
+           RichText="TRUE" 
+           RichTextMode="FullHtml" 
+           IsolateStyles="TRUE" 
+           Sortable="FALSE"/>
+    <ContentType ID="0x01001ab5d7b39a2443f4842eca35132ed362"
+            Name="IT Asset Request"
+            Group="IT Asset Request group"
+            Description="IT Asset Request content types from web part solution">
+        <FieldRefs>
+            <FieldRef ID="{3356f92a-2ce4-48f4-b29b-59e925e38cb8}" />
+            <FieldRef ID="{3015274e-3c3a-4637-9646-a57163460738}" />
+            <FieldRef ID="{beae3d8f-b1e7-421c-bde2-92922410b1d8}" />
+            <FieldRef ID="{5f72239e-de27-4d7f-82cd-52136d88307f}" />
+            <FieldRef ID="{a57d3ecb-aff6-4a1d-aab4-1ac7dabd175a}" />
+            <FieldRef ID="{095fab39-06e8-42a7-ae23-f73892250a2f}" />
+            <FieldRef ID="{86f0b185-03b9-4611-b70e-4c7e2fea95a1}" />
+            <FieldRef ID="{d5dd100c-dd25-4c26-850a-4061aaa45c08}" />
+        </FieldRefs>
+    </ContentType>
+
+    <ListInstance
+            CustomSchema="schema.xml"
+            FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+            Title="IT Asset Requests Tracker"
+            Description="IT Asset Requests Tracker"
+            TemplateType="100"
+            Url="Lists/ITAssetRequestsTracker">
+    </ListInstance>
+
+</Elements>

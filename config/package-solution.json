@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-asset-webpart-client-side-solution",
+    "id": "6aa1a38f-2c86-464a-a27e-ce442da350fc",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+    "features": [{
+      "title": "it-asset-requestasset-webpart",
+      "description": "it-asset-requestasset-webpart-client-side-solution",
+      "id": "00d44ee3-525b-40c3-ae5d-dbd406eb4fc1",
+      "version": "1.0.0.0",
+      "assets": {
+        "elementManifests": [
+          "elements.xml"
+        ],
+        "elementFiles":[
+          "schema.xml"
+        ]
+      }
+    }]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-asset-webpart.sppkg"
+  }
+}
